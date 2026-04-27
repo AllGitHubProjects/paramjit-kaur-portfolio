@@ -9,6 +9,7 @@ A modern, fully-responsive personal portfolio built with **React 18 + Vite + Tai
 ## ✨ Features
 
 - ⚛️ **React 18** with functional components and hooks
+- 🧭 **React Router 6** (HashRouter) — each section is its own page (`/about`, `/experience`, …) and works on any static host
 - ⚡ **Vite** for fast dev/build
 - 🎨 **Tailwind CSS** dark theme with brand gradient
 - 📱 Mobile-first, fully responsive (mobile / tablet / desktop)
@@ -35,16 +36,27 @@ portfolio-react/
 │   │   ├── Certifications.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Footer.jsx
+│   │   ├── Layout.jsx           # Persistent shell: Navbar + Outlet + Footer
 │   │   ├── ScrollProgress.jsx
+│   │   ├── ScrollToTop.jsx      # Resets scroll on route change
 │   │   └── SectionHeader.jsx
+│   ├── pages/                   # One file per route — thin wrappers
+│   │   ├── Home.jsx             # /          → Hero
+│   │   ├── AboutPage.jsx        # /about
+│   │   ├── ExperiencePage.jsx   # /experience
+│   │   ├── SkillsPage.jsx       # /skills
+│   │   ├── EducationPage.jsx    # /education
+│   │   ├── CertificationsPage.jsx # /certifications
+│   │   ├── ContactPage.jsx      # /contact
+│   │   └── NotFound.jsx         # *
 │   ├── data/
-│   │   └── portfolio.js       # 👈 All site content lives here
+│   │   └── portfolio.js         # 👈 All site content lives here
 │   ├── hooks/
-│   │   ├── useReveal.js       # Scroll-reveal animation
-│   │   └── useTypedText.js    # Typewriter effect for hero roles
-│   ├── App.jsx
+│   │   ├── useReveal.js         # Scroll-reveal, re-runs on route change
+│   │   └── useTypedText.js      # Typewriter effect for hero roles
+│   ├── App.jsx                  # HashRouter + Routes
 │   ├── main.jsx
-│   └── index.css              # Tailwind + custom utilities
+│   └── index.css                # Tailwind + custom utilities
 ├── index.html
 ├── tailwind.config.js
 ├── postcss.config.js

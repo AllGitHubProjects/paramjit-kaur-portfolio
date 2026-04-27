@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ShieldCheck, Mail, Briefcase, Linkedin, ChevronDown } from 'lucide-react'
 import { profile, stats } from '../data/portfolio'
 import useTypedText from '../hooks/useTypedText'
@@ -122,12 +123,12 @@ export default function Hero() {
         <p className="mt-3 text-sm md:text-base text-muted">{profile.tagline}</p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="#contact" className="btn btn-primary">
+          <Link to="/contact" className="btn btn-primary">
             <Mail size={16} /> Get in Touch
-          </a>
-          <a href="#experience" className="btn btn-outline">
+          </Link>
+          <Link to="/experience" className="btn btn-outline">
             <Briefcase size={16} /> View Experience
-          </a>
+          </Link>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="btn btn-outline">
             <Linkedin size={16} /> LinkedIn
           </a>
@@ -146,13 +147,13 @@ export default function Hero() {
         </div>
       </div>
 
-      <a
-        href="#about"
-        aria-label="Scroll to about"
+      <Link
+        to="/about"
+        aria-label="Go to About page"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted hover:text-primary transition-colors animate-pulse-slow"
       >
         <ChevronDown size={28} />
-      </a>
+      </Link>
     </section>
   )
 }

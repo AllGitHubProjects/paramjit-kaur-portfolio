@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { navLinks, profile } from '../data/portfolio'
 
@@ -14,6 +15,11 @@ export default function Navbar() {
 
   const close = () => setOpen(false)
 
+  const linkClasses = ({ isActive }) =>
+    `text-sm transition-colors ${
+      isActive ? 'text-primary font-medium' : 'text-muted hover:text-primary'
+    }`
+
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 backdrop-blur-xl transition-colors ${
@@ -23,22 +29,19 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
-        <a
-          href="#hero"
+        <Link
+          to="/"
           className="text-2xl font-bold bg-brand-gradient bg-clip-text text-transparent"
         >
           {profile.initials}
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <li key={l.id}>
-              <a
-                href={`#${l.id}`}
-                className="text-sm text-muted hover:text-primary transition-colors"
-              >
+            <li key={l.path}>
+              <NavLink to={l.path} end={l.path === '/'} className={linkClasses}>
                 {l.label}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -52,18 +55,22 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <ul className="md:hidden flex flex-col gap-1 px-6 pb-4 bg-bg/95 border-t border-primary/10">
           {navLinks.map((l) => (
-            <li key={l.id}>
-              <a
-                href={`#${l.id}`}
+            <li key={l.path}>
+              <NavLink
+                to={l.path}
+                end={l.path === '/'}
                 onClick={close}
-                className="block py-3 text-sm text-muted hover:text-primary transition-colors"
+                className={({ isActive }) =>
+                  `block py-3 text-sm transition-colors ${
+                    isActive ? 'text-primary font-medium' : 'text-muted hover:text-primary'
+                  }`
+                }
               >
                 {l.label}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

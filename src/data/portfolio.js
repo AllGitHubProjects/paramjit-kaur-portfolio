@@ -210,11 +210,11 @@ export const contact = {
 }
 
 export const navLinks = [
-  { id: 'hero', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'education', label: 'Education' },
-  { id: 'certifications', label: 'Certifications' },
-  { id: 'contact', label: 'Contact' },
+  { path: '/', label: 'Home' },
+  { path: '/about', label: 'About' },
+  { path: '/experience', label: 'Experience' },
+  { path: '/skills', label: 'Skills' },
+  { path: '/education', label: 'Education' },
+  { path: '/certifications', label: 'Certifications' },
+  { path: '/contact', label: 'Contact' },
 ]
