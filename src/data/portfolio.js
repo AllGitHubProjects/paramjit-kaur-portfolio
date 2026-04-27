@@ -66,21 +66,22 @@ export const experience = [
     logo: '🔬',
     period: 'Oct 2021 – Present',
     type: 'Full-time · 4 yrs 7 mos',
-    description:
-      'Worked as a Software Quality Assurance Engineer at a global gaming testing and certification leader, ensuring high-quality delivery of gaming and enterprise applications across multiple platforms.
-Responsible for end-to-end quality assurance of applications, including manual and automated testing across front-end, back-end, API and mobile systems. Focused on ensuring regulatory compliance, identifying defects early and delivering seamless user experiences for global gaming clients.
-Key Responsibilities:
-•	Performed manual and automated testing for web, API and mobile applications to ensure product quality and stability 
-•	Designed and executed test cases, test plans and regression suites based on business and functional requirements 
-•	Conducted API testing using Postman to validate data integrity, response accuracy and system integrations 
-•	Developed and maintained automated test scripts using Selenium WebDriver and Python 
-•	Integrated automated test execution into CI/CD pipelines using Jenkins 
-•	Performed cross-browser and cross-platform testing to ensure consistent UI/UX performance 
-•	Logged, tracked and managed defects using defect tracking tools (e.g., Jira or similar systems) 
-•	Collaborated with developers, business analysts and product teams to clarify requirements and ensure test coverage 
-•	Ensured compliance with gaming regulatory standards and industry certification requirements 
-•	Participated in regression testing, system testing and release validation for production deployments
-',
+    description: [
+      'Worked as a Software Quality Assurance Engineer at a global gaming testing and certification leader, ensuring high-quality delivery of gaming and enterprise applications across multiple platforms.',
+      'Responsible for end-to-end quality assurance of applications, including manual and automated testing across front-end, back-end, API and mobile systems. Focused on ensuring regulatory compliance, identifying defects early and delivering seamless user experiences for global gaming clients.',
+    ],
+    responsibilities: [
+      'Performed manual and automated testing for web, API and mobile applications to ensure product quality and stability',
+      'Designed and executed test cases, test plans and regression suites based on business and functional requirements',
+      'Conducted API testing using Postman to validate data integrity, response accuracy and system integrations',
+      'Developed and maintained automated test scripts using Selenium WebDriver and Python',
+      'Integrated automated test execution into CI/CD pipelines using Jenkins',
+      'Performed cross-browser and cross-platform testing to ensure consistent UI/UX performance',
+      'Logged, tracked and managed defects using defect tracking tools (e.g., Jira or similar systems)',
+      'Collaborated with developers, business analysts and product teams to clarify requirements and ensure test coverage',
+      'Ensured compliance with gaming regulatory standards and industry certification requirements',
+      'Participated in regression testing, system testing and release validation for production deployments',
+    ],
     skills: [
       'Selenium',
       'Agile Methodologies',

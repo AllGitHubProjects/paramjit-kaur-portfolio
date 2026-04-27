@@ -1,4 +1,4 @@
-import { Calendar } from 'lucide-react'
+import { Calendar, CheckCircle2 } from 'lucide-react'
 import { experience } from '../data/portfolio'
 import SectionHeader from './SectionHeader'
 
@@ -33,9 +33,27 @@ export default function Experience() {
                   </div>
                 </div>
 
-                <p className="text-muted leading-relaxed mb-5 text-justify">{job.description}</p>
+                {job.description.map((p, i) => (
+                  <p key={i} className="text-muted leading-relaxed mb-3 text-justify">
+                    {p}
+                  </p>
+                ))}
 
-                <div className="flex flex-wrap gap-2">
+                {job.responsibilities && job.responsibilities.length > 0 && (
+                  <div className="mt-5">
+                    <h4 className="text-sm font-semibold text-text mb-3">Key Responsibilities:</h4>
+                    <ul className="space-y-2">
+                      {job.responsibilities.map((r, i) => (
+                        <li key={i} className="flex gap-2 text-sm text-muted leading-relaxed text-justify">
+                          <CheckCircle2 size={16} className="text-primary shrink-0 mt-0.5" />
+                          <span>{r}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <div className="flex flex-wrap gap-2 mt-5">
                   {job.skills.map((s) => (
                     <span
                       key={s}
