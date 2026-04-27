@@ -33,7 +33,7 @@ export default function Experience() {
                   </div>
                 </div>
 
-                <p className="text-muted leading-relaxed mb-5">{job.description}</p>
+                <p className="text-muted leading-relaxed mb-5 text-justify">{job.description}</p>
 
                 <div className="flex flex-wrap gap-2">
                   {job.skills.map((s) => (

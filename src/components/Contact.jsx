@@ -37,7 +37,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-10">
           <div className="reveal">
             <h3 className="text-2xl font-semibold mb-3">{contact.heading}</h3>
-            <p className="text-muted leading-relaxed mb-8">{contact.intro}</p>
+            <p className="text-muted leading-relaxed mb-8 text-justify">{contact.intro}</p>
 
             <div className="space-y-4">
               {contact.items.map((i) => {

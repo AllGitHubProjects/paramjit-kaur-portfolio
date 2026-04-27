@@ -26,8 +26,9 @@ export const profile = {
     email: 'sahiarma@gmail.com',
     github: '#',
   },
-  // Profile image lives in /public, so it is referenced from site root.
-  avatar: '/MyImage.png',
+  // Profile image lives in /public. BASE_URL prepends Vite's `base` so the
+  // path works on GitHub Pages (served under /<repo-name>/) and in dev (served at /).
+  avatar: `${import.meta.env.BASE_URL}MyImage.png`,
 }
 
 export const stats = [

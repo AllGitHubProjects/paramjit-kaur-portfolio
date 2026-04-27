@@ -69,7 +69,7 @@ export default function About() {
             </h3>
 
             {about.paragraphs.map((p, i) => (
-              <p key={i} className="text-muted leading-relaxed mb-4">
+              <p key={i} className="text-muted leading-relaxed mb-4 text-justify">
                 {p}
               </p>
             ))}
