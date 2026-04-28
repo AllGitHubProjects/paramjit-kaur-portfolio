@@ -2,7 +2,7 @@
 
 A modern, fully-responsive personal portfolio built with **React 18 + Vite + Tailwind CSS**. All content (about, experience, skills, education, certifications, contact) is sourced from a single data file and ships as a static, single-page site.
 
-> Live preview (after deploy): _add your URL here_
+> Live preview : https://allgithubprojects.github.io/paramjit-kaur-portfolio/ 
 
 ---
 
