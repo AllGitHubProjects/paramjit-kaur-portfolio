@@ -36,10 +36,10 @@ export default {
           '50%': { transform: 'translateY(-12px)' },
         },
         particleFloat: {
-          '0%': { transform: 'translateY(100vh) scale(0)', opacity: '0' },
-          '10%': { opacity: '0.7' },
-          '90%': { opacity: '0.7' },
-          '100%': { transform: 'translateY(-100px) scale(1)', opacity: '0' },
+          '0%': { transform: 'translateY(0) scale(0)', opacity: '0' },
+          '10%': { transform: 'translateY(-10vh) scale(1)', opacity: '0.7' },
+          '90%': { transform: 'translateY(-90vh) scale(1)', opacity: '0.7' },
+          '100%': { transform: 'translateY(-100vh) scale(0)', opacity: '0' },
         },
         blink: {
           '0%, 100%': { opacity: '1' },

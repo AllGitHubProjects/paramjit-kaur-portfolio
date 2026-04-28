@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ShieldCheck, Mail, Briefcase, Linkedin, ChevronDown } from 'lucide-react'
+import { ShieldCheck, Mail, Briefcase, Linkedin } from 'lucide-react'
 import { profile, stats } from '../data/portfolio'
 import useTypedText from '../hooks/useTypedText'
 
@@ -146,14 +146,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      <Link
-        to="/about"
-        aria-label="Go to About page"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted hover:text-primary transition-colors animate-pulse-slow"
-      >
-        <ChevronDown size={28} />
-      </Link>
     </section>
   )
 }
