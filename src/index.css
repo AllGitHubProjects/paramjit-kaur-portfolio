@@ -13,17 +13,17 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0a0a1a;
+    background: #02060f;
   }
   ::-webkit-scrollbar-thumb {
-    background: #6c63ff;
+    background: #0ea5e9;
     border-radius: 3px;
   }
   /* Form auto-fill: keep dark background instead of browser default white */
   input:-webkit-autofill,
   textarea:-webkit-autofill {
-    -webkit-text-fill-color: #e0e0ff;
-    -webkit-box-shadow: 0 0 0 1000px #12122a inset;
+    -webkit-text-fill-color: #dceeff;
+    -webkit-box-shadow: 0 0 0 1000px #0a1729 inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 }
@@ -33,7 +33,7 @@
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300;
   }
   .btn-primary {
-    @apply bg-brand-gradient text-white shadow-[0_8px_30px_rgba(108,99,255,0.4)] hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(108,99,255,0.55)];
+    @apply bg-brand-gradient text-white shadow-[0_8px_30px_rgba(14,165,233,0.4)] hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(14,165,233,0.55)];
   }
   .btn-outline {
     @apply border border-primary/40 text-text hover:bg-primary/10 hover:-translate-y-0.5;
@@ -53,7 +53,7 @@
   }
   .card {
     @apply bg-card border border-primary/10 rounded-2xl p-6 transition-all duration-300
-           hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(108,99,255,0.15)];
+           hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(14,165,233,0.18)];
   }
   .reveal {
     @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;

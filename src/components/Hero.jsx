@@ -49,7 +49,7 @@ function Particles() {
       left: Math.random() * 100,
       delay: Math.random() * 10,
       duration: Math.random() * 15 + 10,
-      color: ['#6C63FF', '#FF6584', '#43E97B', '#FFA600', '#409EFF'][
+      color: ['#0EA5E9', '#06B6D4', '#67E8F9', '#0369A1', '#1E40AF'][
         Math.floor(Math.random() * 5)
       ],
     })),

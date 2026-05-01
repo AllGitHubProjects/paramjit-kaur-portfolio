@@ -100,7 +100,7 @@ export const skillCategories = [
   {
     title: 'Testing Frameworks',
     icon: 'FlaskConical',
-    accent: 'from-purple-500 to-indigo-500',
+    accent: 'from-sky-500 to-blue-600',
     type: 'bars',
     items: [
       { name: 'Selenium', pct: 90 },
@@ -113,7 +113,7 @@ export const skillCategories = [
   {
     title: 'API & Tools',
     icon: 'Plug',
-    accent: 'from-emerald-500 to-teal-500',
+    accent: 'from-cyan-500 to-teal-500',
     type: 'bars',
     items: [
       { name: 'Postman API', pct: 88 },
@@ -125,15 +125,15 @@ export const skillCategories = [
   {
     title: 'Programming Languages',
     icon: 'Code2',
-    accent: 'from-orange-500 to-amber-500',
+    accent: 'from-blue-500 to-indigo-600',
     type: 'pills',
-    pillColor: 'bg-orange-500/15 text-orange-300 border-orange-500/30',
+    pillColor: 'bg-blue-500/15 text-blue-300 border-blue-500/30',
     items: ['JavaScript', 'JSON', 'Kotlin', 'PHP', 'C++', 'C', 'MySQL'],
   },
   {
     title: 'QA Methodologies',
     icon: 'ListChecks',
-    accent: 'from-pink-500 to-rose-500',
+    accent: 'from-cyan-400 to-sky-600',
     type: 'bars',
     items: [
       { name: 'Agile / Scrum', pct: 93 },

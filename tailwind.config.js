@@ -4,20 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#6C63FF',
-        secondary: '#FF6584',
-        accent: '#43E97B',
-        bg: '#0A0A1A',
-        card: '#12122A',
-        text: '#E0E0FF',
-        muted: '#8888AA',
+        primary: '#0EA5E9',
+        secondary: '#06B6D4',
+        accent: '#67E8F9',
+        bg: '#02060F',
+        card: '#0A1729',
+        text: '#DCEEFF',
+        muted: '#6B89A8',
       },
       fontFamily: {
         sans: ['Poppins', 'system-ui', 'sans-serif'],
         mono: ['"Fira Code"', 'monospace'],
       },
       backgroundImage: {
-        'brand-gradient': 'linear-gradient(135deg,#6C63FF,#FF6584)',
+        'brand-gradient': 'linear-gradient(135deg,#0EA5E9,#0369A1)',
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
