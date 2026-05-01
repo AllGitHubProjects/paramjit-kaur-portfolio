@@ -100,7 +100,7 @@ export const skillCategories = [
   {
     title: 'Testing Frameworks',
     icon: 'FlaskConical',
-    accent: 'from-sky-500 to-blue-600',
+    accent: 'from-cyan-400 to-black',
     type: 'bars',
     items: [
       { name: 'Selenium', pct: 90 },
@@ -113,7 +113,7 @@ export const skillCategories = [
   {
     title: 'API & Tools',
     icon: 'Plug',
-    accent: 'from-cyan-500 to-teal-500',
+    accent: 'from-cyan-300 to-cyan-900',
     type: 'bars',
     items: [
       { name: 'Postman API', pct: 88 },
@@ -125,15 +125,15 @@ export const skillCategories = [
   {
     title: 'Programming Languages',
     icon: 'Code2',
-    accent: 'from-blue-500 to-indigo-600',
+    accent: 'from-cyan-500 to-slate-900',
     type: 'pills',
-    pillColor: 'bg-blue-500/15 text-blue-300 border-blue-500/30',
+    pillColor: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30',
     items: ['JavaScript', 'JSON', 'Kotlin', 'PHP', 'C++', 'C', 'MySQL'],
   },
   {
     title: 'QA Methodologies',
     icon: 'ListChecks',
-    accent: 'from-cyan-400 to-sky-600',
+    accent: 'from-cyan-400 to-slate-900',
     type: 'bars',
     items: [
       { name: 'Agile / Scrum', pct: 93 },
@@ -144,9 +144,9 @@ export const skillCategories = [
   {
     title: 'Other Technologies',
     icon: 'Network',
-    accent: 'from-sky-500 to-blue-500',
+    accent: 'from-cyan-500 to-black',
     type: 'pills',
-    pillColor: 'bg-sky-500/15 text-sky-300 border-sky-500/30',
+    pillColor: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30',
     items: [
       'Networking',
       'Microsoft Office',
