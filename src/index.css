@@ -7,58 +7,124 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-bg text-text font-sans antialiased overflow-x-hidden;
+    @apply bg-paper text-ink font-sans antialiased overflow-x-hidden;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #0a0a1a;
+    background: #f2f1ec;
   }
   ::-webkit-scrollbar-thumb {
-    background: #6c63ff;
-    border-radius: 3px;
+    background: #c8c6bd;
+    border-radius: 0;
   }
-  /* Form auto-fill: keep dark background instead of browser default white */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0e1116;
+  }
+  /* Form auto-fill: keep the off-white look */
   input:-webkit-autofill,
   textarea:-webkit-autofill {
-    -webkit-text-fill-color: #e0e0ff;
-    -webkit-box-shadow: 0 0 0 1000px #12122a inset;
+    -webkit-text-fill-color: #0e1116;
+    -webkit-box-shadow: 0 0 0 1000px #fafaf7 inset;
     transition: background-color 5000s ease-in-out 0s;
+  }
+  ::selection {
+    background: #1a7f37;
+    color: #fafaf7;
   }
 }
 
 @layer components {
+  /* ── Status badges ───────────────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm text-[10px] font-mono font-bold tracking-wider uppercase border;
+  }
+  .badge-pass {
+    @apply badge bg-pass/10 text-pass border-pass/30;
+  }
+  .badge-running {
+    @apply badge bg-running/10 text-running border-running/30;
+  }
+  .badge-fail {
+    @apply badge bg-fail/10 text-fail border-fail/30;
+  }
+
+  /* ── Cards / panels ──────────────────────────────────────────── */
+  .test-card {
+    @apply bg-paper-2 border border-rule rounded-sm p-6 transition-colors duration-200
+           hover:border-ink/40;
+  }
+
+  /* ── Coverage bar ────────────────────────────────────────────── */
+  .coverage-track {
+    @apply h-1.5 w-full bg-rule rounded-none overflow-hidden;
+  }
+  .coverage-fill {
+    @apply h-full bg-pass;
+    width: 0%;
+  }
+  .coverage-fill.run {
+    animation: coverageFill 1.2s ease-out forwards;
+  }
+
+  /* ── Log line ────────────────────────────────────────────────── */
+  .log-line {
+    @apply font-mono text-xs leading-relaxed text-ink-muted;
+  }
+  .log-line .ts {
+    @apply text-ink-muted/70 mr-3;
+  }
+  .log-line .lvl-info {
+    @apply text-accent mr-3;
+  }
+  .log-line .lvl-pass {
+    @apply text-pass mr-3;
+  }
+  .log-line .lvl-warn {
+    @apply text-running mr-3;
+  }
+
+  /* ── Report header banner ───────────────────────────────────── */
+  .report-header {
+    @apply font-mono text-xs text-ink-muted border-y border-rule py-2 px-4 bg-paper-2;
+  }
+
+  /* ── Buttons ─────────────────────────────────────────────────── */
   .btn {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300;
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-sm font-mono text-xs font-medium tracking-wide uppercase transition-all duration-200 border;
   }
   .btn-primary {
-    @apply bg-brand-gradient text-white shadow-[0_8px_30px_rgba(108,99,255,0.4)] hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(108,99,255,0.55)];
+    @apply bg-ink text-paper border-ink hover:bg-paper hover:text-ink;
   }
   .btn-outline {
-    @apply border border-primary/40 text-text hover:bg-primary/10 hover:-translate-y-0.5;
+    @apply bg-transparent text-ink border-ink/30 hover:border-ink hover:bg-ink/5;
   }
-  .section-tag {
-    @apply inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase
-           bg-primary/10 text-primary border border-primary/20 mb-4;
+  .btn-pass {
+    @apply bg-pass text-paper border-pass hover:bg-paper hover:text-pass;
   }
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-4;
-  }
-  .section-title span {
-    @apply bg-brand-gradient bg-clip-text text-transparent;
-  }
-  .section-line {
-    @apply mx-auto w-16 h-1 rounded-full bg-brand-gradient;
-  }
-  .card {
-    @apply bg-card border border-primary/10 rounded-2xl p-6 transition-all duration-300
-           hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(108,99,255,0.15)];
-  }
+
+  /* ── Reveal-on-scroll ────────────────────────────────────────── */
   .reveal {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
   }
   .reveal.visible {
     @apply opacity-100 translate-y-0;
+  }
+
+  /* ── Mono helpers ────────────────────────────────────────────── */
+  .kbd {
+    @apply font-mono text-[11px] px-1.5 py-0.5 rounded-sm bg-paper-2 border border-rule text-ink-muted;
+  }
+}
+
+@layer utilities {
+  .grid-paper {
+    background-image:
+      linear-gradient(to right, rgba(14, 17, 22, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(14, 17, 22, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }

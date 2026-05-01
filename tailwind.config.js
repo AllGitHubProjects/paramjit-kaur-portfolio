@@ -4,47 +4,48 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#6C63FF',
-        secondary: '#FF6584',
-        accent: '#43E97B',
-        bg: '#0A0A1A',
-        card: '#12122A',
-        text: '#E0E0FF',
-        muted: '#8888AA',
+        paper: '#FAFAF7',
+        'paper-2': '#F2F1EC',
+        ink: '#0E1116',
+        'ink-muted': '#5B6066',
+        rule: '#E2E1DC',
+        pass: '#1A7F37',
+        running: '#B45309',
+        fail: '#B91C1C',
+        accent: '#0969DA',
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
-        mono: ['"Fira Code"', 'monospace'],
-      },
-      backgroundImage: {
-        'brand-gradient': 'linear-gradient(135deg,#6C63FF,#FF6584)',
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s ease-in-out infinite',
-        'particle': 'particleFloat 15s linear infinite',
-        'blink': 'blink 1s step-end infinite',
+        'coverage-fill': 'coverageFill 1.2s ease-out forwards',
+        'cursor-blink': 'cursorBlink 1s step-end infinite',
+        'ticker': 'ticker 18s linear infinite',
+        'spin-slow': 'spin 2.4s linear infinite',
       },
       keyframes: {
         fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-12px)' },
+        coverageFill: {
+          '0%': { width: '0%' },
+          '100%': { width: 'var(--coverage, 100%)' },
         },
-        particleFloat: {
-          '0%': { transform: 'translateY(0) scale(0)', opacity: '0' },
-          '10%': { transform: 'translateY(-10vh) scale(1)', opacity: '0.7' },
-          '90%': { transform: 'translateY(-90vh) scale(1)', opacity: '0.7' },
-          '100%': { transform: 'translateY(-100vh) scale(0)', opacity: '0' },
-        },
-        blink: {
+        cursorBlink: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
+        ticker: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      backgroundImage: {
+        'grid-paper':
+          'linear-gradient(to right, rgba(14,17,22,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(14,17,22,0.04) 1px, transparent 1px)',
       },
     },
   },
