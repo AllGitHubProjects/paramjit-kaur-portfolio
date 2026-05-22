@@ -17,7 +17,7 @@ export default {
         mono: ['"Fira Code"', 'monospace'],
       },
       backgroundImage: {
-        'brand-gradient': 'linear-gradient(135deg,#22D3EE 0%,#06B6D4 45%,#000000 100%)',
+        'brand-gradient': 'linear-gradient(135deg,#06B6D4 0%,#06B6D4 100%)',
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
